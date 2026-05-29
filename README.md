@@ -1,6 +1,6 @@
 # ESCAPE.EXE
 
-## Video Demo : URL
+## Video Demo : <https://youtu.be/wjzOTcb1Bbo>
 
 A retro terminal-style escape game powered by AI, built as a final project for [CS50x](https://cs50.harvard.edu/x/).
 
