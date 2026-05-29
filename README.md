@@ -1,8 +1,10 @@
 # ESCAPE.EXE
 
+## Video Demo : URL
+
 A retro terminal-style escape game powered by AI, built as a final project for [CS50x](https://cs50.harvard.edu/x/).
 
-## 🎮 Demo
+## 🎮 Play
 
 > 🔗 [Play the game](#) ← à remplacer après déploiement
 > 🏆 [Global Leaderboard](https://jrinvil.com/escape_exe/leaderboard.php)
