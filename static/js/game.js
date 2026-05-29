@@ -124,11 +124,13 @@ async function showVictoryScreen() {
     await wait(500);
     await new Promise(r => typeWriter('=======================================', r));
     await wait(300);
-    await new Promise(r => typeWriter('   Type "restart" to play again.', r));
+    await new Promise(r => typeWriter('   Type "restart" to play again. If you want to reset, reload the page', r));
 
     // Réactive la saisie en mode restart
     document.getElementById('input-line').style.display = 'flex';
     commandInput.dataset.mode = "restart";
+
+    
 }
 
 async function sendCommand(cmd) {
@@ -189,6 +191,7 @@ commandInput.addEventListener('keydown', (e) => {
              return;
         }
 
+
         sendCommand(cmd); // envoie commande au serveur
         commandInput.value = ''; // vide le champ de saisie
         addEmptyLine(); // ajoute ligne vide après chaque commande
@@ -201,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             typeWriter('IDENTIFY YOURSELF, OPERATOR.', () => {
                 setTimeout(() => {
+
                     promptUsername();
                 }, 500);
             });
