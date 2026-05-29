@@ -6,7 +6,7 @@ A retro terminal-style escape game powered by AI, built as a final project for [
 
 ## 🎮 Play
 
-> 🔗 [Play the game](#) ← à remplacer après déploiement
+> 🔗 [Play the game](https://escape-exe.onrender.com)
 > 🏆 [Global Leaderboard](https://jrinvil.com/escape_exe/leaderboard.php)
 
 ## 📖 Description
