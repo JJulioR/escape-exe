@@ -7,8 +7,6 @@ import string
 app = Flask(__name__)
 app.secret_key = "escape_exe_secret"
 
-
-
 from game.rooms import ROOMS
 # Commandes disponibles affichées avec "help"
 HELP_TEXT = """AVAILABLE COMMANDS:
