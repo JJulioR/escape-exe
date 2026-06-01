@@ -45,36 +45,6 @@ hint           — get a hint for the current puzzle
 inventory      — check your inventory
 help           — show all commands
 
-## 🚀 IF Run Locally
-
-### Prerequisites
-- Python 3.14+
-- pip
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/TON_USERNAME/escape-exe.git
-cd escape-exe
-
-# Create virtual environment
-python -m venv venv
-venv\Scripts\activate  # Windows
-source venv/bin/activate  # Mac/Linux
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Create .env file
-echo GROQ_API_KEY=your_key_here > .env
-
-# Run the app
-python app.py
-```
-
-Then open `http://127.0.0.1:5000` in your browser.
-
 ## 📁 Project Structure
 escape-exe/
 ├── app.py              ← Flask routes and game logic
