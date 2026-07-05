@@ -8,7 +8,7 @@ ROOMS = {
         "puzzle": {
             "type": "code",                          # Type
             "answer": "1984",                        # Réponse 
-            "hint": "The broken screen flickers... you can barely read: 'Year of the first virus'",
+            "hint": "The broken screen flickers... you can barely read: 'Favorite book by George Orwell.'",  # Indice
             "solved": False,                        
             "reward": "The door to the north clicks open."  # Message si résolu
         }
