@@ -1,5 +1,5 @@
 from flask import Flask, render_template, session ,request, jsonify
-from game.ai_narrator import generate_room_description
+from game.rooms import ROOMS, ITEM_DESCRIPTIONS
 import requests
 import random
 import string
@@ -96,7 +96,7 @@ def handle_command(cmd):
             for room_id, room_data in ROOMS.items()
         }
         session.modified = True
-        return generate_room_description("server_room", session["room_items"]["server_room"], "Game just started")
+        return ROOMS["server_room"]["description"]
 
     # Commande : HELP
     elif cmd == "help":
@@ -104,7 +104,7 @@ def handle_command(cmd):
 
     # Commande : look — décrit la salle actuelle
     elif cmd == "look":
-        return generate_room_description(room_id, room_items)
+        return room["description"]
 
     # Commande : INVENTORY
     elif cmd == "inventory":
@@ -134,7 +134,7 @@ def handle_command(cmd):
     elif cmd.startswith("examine "):
         item = cmd[8:].strip().replace(" ", "_")
         if item in session.get("inventory", []) or item in room_items:
-            return generate_room_description(room_id, [item],f"You examine the {item.replace('_', ' ')}. It looks ordinary... but maybe it has a hidden use?")
+            return ITEM_DESCRIPTIONS.get(item, f"You examine the {item.replace('_', ' ')}. Nothing special.")
         return f"There is no {item.replace('_', ' ')} here."
     
     # Commande USE [item]
@@ -243,9 +243,8 @@ def handle_movement(direction, room_id, room):
     
         return "🎉 SYSTEM BREACH COMPLETE. You escaped! Congratulations!"
 
-    # Génère une description IA de la nouvelle salle
-    room_items = session["room_items"][next_room_id]
-    return generate_room_description(next_room_id, room_items, "Player just entered")
+     # Descrip de nouvelle salle
+    return ROOMS[next_room_id]["description"]
 
 
 if __name__ == "__main__":
