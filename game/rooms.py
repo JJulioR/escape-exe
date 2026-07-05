@@ -44,3 +44,15 @@ ROOMS = {
         "puzzle": None                               # Pas d'énigme, c'est la fin !
     }
 }
+
+ITEM_DESCRIPTIONS = {
+    "torn_note": "A torn piece of paper. You can barely read: 'The answer is in our DNA... literally.'",
+    "broken_screen": "A cracked monitor. Through the static you can make out: 'Favorite book by George Orwell.'",
+    "strange_vial": "A vial filled with a glowing blue liquid. The label reads: 'Sample X-19 — DO NOT OPEN'.",
+    "access_card": "A security access card. Name: Dr. Chen. Level 3 clearance.",
+    "lab_notes": "Scattered research notes. One page reads: 'Master password = building block of life'.",
+    "keypad": "A numeric keypad on the wall. It's waiting for a 4-digit code.",
+    "computer": "An old computer. The login screen asks for a password.",
+    "locked_door": "A heavy door with a card reader. It won't budge without the right card.",
+    "vent": "A metal vent on the floor. It's sealed shut."
+}
