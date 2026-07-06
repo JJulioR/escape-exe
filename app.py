@@ -211,9 +211,18 @@ def handle_movement(direction, room_id, room):
 
     # Vérifie si la salle suivante nécessite un puzzle résolu
     locked_paths = {
-        ("server_room", "north"): "server_room",
-        ("corridor", "north"): "corridor"
-    }
+    ("server_room", "north"): "server_room",
+    ("corridor", "north"): "corridor",
+    ("corridor", "east"): "corridor",
+    ("storage_room", "north"): "storage_room",
+    ("lab", "north"): "lab",
+    ("reactor_room", "north"): "reactor_room",
+    ("control_room", "east"): "control_room",
+    ("ventilation_shaft", "north"): "ventilation_shaft",
+    ("morgue", "north"): "morgue",
+    ("director_office", "east"): "director_office",
+    ("rooftop", "north"): "rooftop"
+ }
 
     lock_key = (room_id, direction)
     if lock_key in locked_paths:
@@ -226,7 +235,7 @@ def handle_movement(direction, room_id, room):
     # Déplace le joueur
     session["room"] = next_room_id
 
-    # Vérifie si c'est la sortie (victoire !)
+    # Vérif si c'est la sortie (victoire !)
     if next_room_id == "exit":
         username = session.get("username", "Anonymus")
         player_id = session.get("player_id", "???")
